@@ -2,9 +2,9 @@ name: MovieRoll Staging CI
 
 on:
   push:
-    branches: [ develop ]
+    branches: [ main, develop ]
   pull_request:
-    branches: [ develop ]
+    branches: [ main, develop ]
 
 jobs:
   build-and-test:
