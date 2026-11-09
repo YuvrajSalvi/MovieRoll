@@ -1,0 +1,21 @@
+package com.yuvraj.movieroll.core.model
+
+import com.yuvraj.movieroll.core.browser.BrowserResolver
+import com.yuvraj.movieroll.core.aniskip.AniSkipClient
+import com.yuvraj.movieroll.core.subtitle.external.SubDlClient
+import com.yuvraj.movieroll.core.util.TmdbBridge
+import okhttp3.OkHttpClient
+
+/**
+ * Host Application API provided to Universal Plugins.
+ * Bridges external service clients and headless browser capabilities
+ * without giving plugins direct Android Context or Activity references.
+ */
+interface HostApi {
+    val browserResolver: BrowserResolver
+    val okHttpClient: OkHttpClient
+    val defaultUserAgent: String
+    val tmdbBridge: TmdbBridge
+    val subDlClient: SubDlClient
+    val aniSkipClient: AniSkipClient
+}
